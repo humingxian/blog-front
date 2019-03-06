@@ -1,0 +1,62 @@
+.contactMe{
+  margin: 0 auto;
+  width: 65%;
+  padding: 100px 0 0 0;
+  >div{
+    overflow: hidden;
+    >div{
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 0 100px 0 0;
+      h2{
+        font-size: 26px;
+        padding: 12px 0 30px;
+        color: #444;
+      }
+    }
+    >div:first-child{
+      border-right: 2px solid #ccc;
+      p{
+        color: #666;
+        line-height: 24px;
+        padding: 12px 0 20px;
+        input{
+          width: 46%;
+          height: 36px;
+          padding: 8px;
+          box-sizing: border-box;
+          color: #999;
+        }
+      }
+      textarea{
+        width: 100%;
+        border-color: #ccc;
+        height: 160px;
+        resize:none;
+        color: #999;
+        padding: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      p .sub{
+        float: right;
+        padding: 8px 50px;
+        border: 2px solid #ccc;
+        border-radius: 24px;
+        color: #666;
+      }
+    }
+    >div:last-child{
+      padding-left: 40px;
+      p{
+        color: #666;
+        line-height: 48px;
+      }
+    }
+  }
+  .copyright{
+    padding: 100px 0 40px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,24 @@
+.banner{
+  background-image: linear-gradient(to top right, rgb(62, 59, 100),rgb(105, 45, 105));
+  margin-top: 40px;
+  padding: 120px 200px;
+  h1{
+    width: 40%;
+    line-height: 50px;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px 0;
+  }
+  h1:first-child{
+    color: #fff;
+  }
+  h1:last-child{
+    color: rgb(163,144,174)
+  }
+  div{
+    display: block;
+    height: 240px;
+    width: 2px;
+    background: rgb(163,144,174);
+  }
+}

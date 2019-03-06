@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import './index.scss'
 
-import Banner from './banner/index'
-import Recommend from './recommend/index'
-import ArticleList from './articleItem'
-import ContactMe from './contactMe'
+import HeaderNav from '../../component/headerNav'
+import Banner from '../../component/banner/index'
+import Recommend from '../../component/recommend/index'
+import ArticleList from '../../component/articleItem'
+import ContactMe from '../../component/contactMe'
 
 class Home extends Component {
 
@@ -25,7 +26,7 @@ class Home extends Component {
   render() {
     return (
       <div className="homePage">
-        <h1>会当凌绝顶，一览众山小</h1>
+        <HeaderNav />
         <Banner />
         <div style={{borderBottom: '2px solid #ccc'}}>
           <Recommend />
