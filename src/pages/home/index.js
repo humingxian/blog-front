@@ -18,7 +18,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-
+    // window.go = this.props.history
 
   }
 
@@ -26,7 +26,7 @@ class Home extends Component {
   render() {
     return (
       <div className="homePage">
-        <HeaderNav />
+        <HeaderNav props={{...this.props}} />
         <Banner />
         <div style={{borderBottom: '2px solid #ccc'}}>
           <Recommend />

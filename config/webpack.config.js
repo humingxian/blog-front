@@ -1,21 +1,48 @@
 'use strict';
-
+// 处理文件
 const fs = require('fs');
+// 对路径的处理 nodejs原生api
 const path = require('path');
+// webpack本身
 const webpack = require('webpack');
+// resolve解析
+// 实现节点require.resolve（）算法，以便您可以异步和同步地代表文件require.resolve（）
 const resolve = require('resolve');
+// ？
 const PnpWebpackPlugin = require('pnp-webpack-plugin');
+// 生成html文件模版并自动导入资源
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// 这个Webpack插件强制所有需要的模块的整个路径匹配磁盘上实际路径的具体情况。
+// 使用这个插件可以帮助减轻开发人员在OSX上工作的情况，因为OSX不遵循严格的路
+// 径敏感性，这会导致与其他开发人员的冲突，或者构建运行其他操作系统的盒子，这些系统需要正确的路径。
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
+// 打包时将css代码分离并独立成单个文件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// 压缩单独的 css 文件
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// 可以处理很多的css hack ，使用带有实时输入的演示工具，如Autoprefixer演示。
 const safePostCssParser = require('postcss-safe-parser');
+// 该插件能够在项目根目录生成一份## manifest.json的文件，
+// 通过该文件的映射关系可以让我们知道webpack是如何追踪所有模块并映射到输出bundle中的。
+// options.fileName 表示要生成文件的名称，默认为manifest.json
+// options.publicPath 表示生成映射文件的路径，默认为output.publicPath，字符串类型
+// options.basePath 
+// options.writeToFileEmit
 const ManifestPlugin = require('webpack-manifest-plugin');
+
+
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+// PWA（Progressive Web Apps）是谷歌近几年一直在推进的 web 应用新模型。PWA  借助 Service Worker 
+// 缓存网站的静态资源，甚至是网络请求，使网站在离线时也能访问。
+// 能够自动生成 Service Worker 和 静态资源列表 - workbox-webpack-plugin。（谷歌发布）
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+
+
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
+
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const paths = require('./paths');
