@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import './index.scss'
 
-let arr = [0, 0]
-
 class Recommend extends Component {
 
 

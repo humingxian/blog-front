@@ -21,11 +21,18 @@ const Article = Loadable({
   loading: Loading
 })
 
+// 动画
+const MyMotion = Loadable({
+  loader: () => import('../pages/motion'),
+  loading: Loading
+})
+
 const Routers = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/article" component={Article} />
+      <Route path="/myMotion" component={MyMotion} />
     </Switch>
 )
 

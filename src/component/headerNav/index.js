@@ -24,8 +24,8 @@ class HeaderNav extends Component {
 
   render() {
     return (
-      <div className='headerNav'>
-        <h1 onClick={this.goAbout}>会当凌绝顶，一览众山小</h1>
+      <div className='headerNavBox'>
+        <div className="headerNav">123</div>
       </div>
     )
   }

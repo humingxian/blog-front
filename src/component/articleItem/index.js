@@ -15,7 +15,7 @@ class ArticleList extends Component {
             return (
               <div className="articleItem" data-flex='main:justify cross:center box:first' key={index}>
                 <div>
-                  <img src={require('../../assert/images/cat.png')} alt=''/>
+                  <img src={require('../../assert/images/cat.png')} alt='1'/>
                 </div>
                 <div>
                   <p>颤动时间{value}</p>

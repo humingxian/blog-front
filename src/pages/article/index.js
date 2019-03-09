@@ -8,7 +8,7 @@ class Article extends Component{
   render() {
     return (
       <div>
-        <img src={require('../../assert/images/ggx.png')} />
+        <img src={require('../../assert/images/ggx.png')} alt='' />
       </div>
     )
   }
